@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Use a dot (.) to select the class */
+.section-container {
+    @apply max-w-6xl mx-auto text-center px-10;
+}
+
+body {
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Corrected typo in media query */
+@media (max-width: 576px) {
+    body {
+        background-image: url(../images/bg-header-mobile.png);
+    }
+}
