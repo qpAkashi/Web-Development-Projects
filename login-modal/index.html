@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Rokkitt:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ['Mulish', 'sans-serif'],
+            mono: ['Rokkitt', 'monospace'],
+          },
+        },
+      }
+    </script>
+    <title>Login Modal</title>
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <!-- Global Container -->
+    <div class="flex items-center justify-center min-h-screen p-5">
+      <!-- Card Container -->
+      <div class="relative flex flex-col p-8 space-y-10 bg-gray-800 rounded-2xl shadow-lg md:flex-row md:space-y-0 md:space-x-12 md:p-12">
+        
+        <!-- Left Side -->
+        <div class="flex flex-col space-y-6">
+          
+          <!-- Title & Description -->
+          <h2 class="text-4xl font-bold font-mono text-gray-200">Log In</h2>
+          <p class="max-w-sm text-gray-400 font-light">
+            Access your account to upload or download pictures, videos, or music.
+          </p>
+
+          <!-- Input Field -->
+          <input
+            type="text"
+            class="w-full p-4 border border-gray-600 bg-gray-700 rounded-md placeholder:text-gray-400 focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter your email address"
+          />
+
+          <!-- Middle Content -->
+          <div class="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
+            <a href="#" class="text-blue-400 hover:underline">Forgot password?</a>
+
+            <button class="w-full md:w-auto flex items-center justify-center p-4 space-x-4 text-white bg-blue-600 rounded-lg shadow-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-xl">
+              <span>Next</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="13" y1="18" x2="19" y2="12" />
+                <line x1="13" y1="6" x2="19" y2="12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-b border-gray-600"></div>
+
+          <!-- Social Login -->
+          <p class="text-center text-gray-400">or log in with</p>
+
+          <div class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+            <button class="flex items-center justify-center w-full py-3 space-x-3 text-gray-300 border border-gray-600 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-200">
+              <img src="images/facebook.png" alt="Facebook" class="w-7" />
+              <span>Facebook</span>
+            </button>
+
+            <button class="flex items-center justify-center w-full py-3 space-x-3 text-gray-300 border border-gray-600 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-200">
+              <img src="images/google.png" alt="Google" class="w-7" />
+              <span>Google</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side (Image) -->
+        <img src="images/image.jpg" alt="Login Image" class="w-[400px] hidden md:block rounded-xl shadow-lg" />
+
+        <!-- Close Button -->
+        <div class="absolute -top-5 right-4 flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full md:top-4 hover:bg-gray-600 transition duration-200 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
